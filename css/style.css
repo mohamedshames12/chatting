@@ -13,3 +13,140 @@
 body{
     background: #e5e5e5;
 }
+
+.wrapper{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.wrapper .container{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .container .box{
+    flex: 2;
+}
+
+.wrapper .container .box .image{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.wrapper .container .box .image img {
+    height: 10rem;
+    margin-right: 2rem;
+}
+
+.wrapper .container .box .image span {
+    font-weight: 600;
+    color: #2a9d8f;
+    font-size: 1.2rem;
+}
+
+.wrapper .container .box .explore{
+    text-align: center;
+    position: relative;
+    font-size: 1.3rem;
+    color: #e5e5e5;
+    -webkit-text-stroke: .5px #383d52;
+    text-transform: uppercase;
+    width: fit-content;
+    margin: auto;
+}
+
+.wrapper .container .box .explore::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    color: #e76f51;
+    -webkit-text-stroke: 0px #383d52;
+    border-right: 2px solid #e76f51;
+    overflow: hidden;
+    animation: animate 5s linear infinite;
+}
+
+.wrapper .container form{
+    flex: 1;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.wrapper .container form h1 {
+    text-align: center;
+    color: #2a9d8f;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.wrapper .container form p{
+    color: #ccc;
+}
+
+.wrapper .container form .star {
+    color: #e76f51;
+    font-weight: 700;
+}
+
+
+.wrapper .container form input {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 0 5px;
+    border: 1px solid #eee;
+}
+
+
+.wrapper .container form .link{
+    text-align: center;
+    font-size: .9rem;
+    margin: .5rem 0;
+}
+
+.wrapper .container form a{
+    font-size: .8rem;
+    color: #e76f51;
+}
+
+.wrapper .container form a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width:879px) {
+    .wrapper .container{
+        display: block;
+    }
+
+    .wrapper .container .box{
+        width: 95%;
+        margin:2rem auto;
+    }
+
+    .wrapper .container .box .image img {
+        height: 5rem;
+    }
+
+    .wrapper .container .box .image span{
+        font-size: .9rem;
+    }
+    .wrapper .container .box .explore{
+        font-size: .9rem;
+    }
+
+    .wrapper .container form{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+    }
+}
