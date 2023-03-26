@@ -141,24 +141,170 @@ body{
     text-transform: uppercase;
 }
 
-.header .navber{
-    display: flex;
-    align-items: center;
-}
-
-.header .navber a{
-    background: #2a9d8f;
-    margin-right: 1rem;
-    padding: .3rem 1rem;
-    color: #fff;
-    border-radius: 5px;
-}
-
 .header .navber a:hover{
     border: 1px solid #2a9d8f;
     background: none;
     color: #2a9d8f;
 }
+.container {
+    position: relative;
+}
+
+.container .menu{
+    width: 30px;
+    height: 30px;
+    margin: 8%;
+    background-image: linear-gradient(to right, #f4a261, #e76f51);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container .menu div {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    position: relative;
+}
+
+.container .menu span {
+    background-color: #fff;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49%, 100%);
+    transition: transform 0.5s, width 0.5s;
+}
+
+.container .menu .line-1{
+    transform: translate(-50%, -152%);
+}
+
+.container .menu .line-3{
+    transform: translate(-50%, 10px);
+}
+
+.container .navber{
+    position: absolute;
+    background: #FFF;
+    border: 1px solid lightgray;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 5px;
+    top: 3.3rem;
+    left: -5rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    z-index: 2000;
+
+}
+
+.container .navber.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.header .navber a{
+    background: #2a9d8f;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: .5rem;
+}
+
+.header .navber a:nth-child(2){
+    background: red;
+}
+
+.header .navber a:nth-child(2):hover{
+    background-color: #FFF;
+    border: 1px solid red;
+    color: red;
+}
+
+.header .navber .name{
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.container-chat{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+}
+
+.box-users{
+    flex: 1;
+    position: relative;
+}
+
+.container-user{
+    background: #ffffff;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.box-user{
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 1rem 0;
+    background: #fff;
+}
+
+.box-user .image{
+    display: flex;
+    
+}
+
+.box-user .image img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.box-user .image .name{
+    color: #383d52;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.box-user .stauts{
+    position: absolute;
+    top: 3rem;
+    right: 5rem;
+    font-weight: 600;
+    color: #383d52;
+}
+
+.box-user .stauts span {
+    display: flex;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #2a9d8f;
+    position: absolute;
+    top: .5rem; 
+    right: -1.5rem;
+}
+
+
+
+.box-mes{
+    flex: 1;
+}
+
+
 
 @media (max-width:879px) {
     .wrapper .container{
@@ -198,4 +344,17 @@ body{
         padding: .3rem .8rem;
         margin-right: .5rem;
     }
+
+    .container .navber{
+        position: absolute;
+        background: #FFF;
+        border: 1px solid lightgray;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 5px;
+        top: 3.3rem;
+        left: -8.5rem;
+    }
+    
+
 }

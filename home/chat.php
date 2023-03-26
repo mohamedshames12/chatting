@@ -22,10 +22,19 @@
     <title>chatting</title>
 </head>
 <body>
-   
-<?php include '../components/header.php';?>
+        <!-- header -->
+        <?php include '../components/header.php';?>
 
-soon
+        <div class="container-chat">
+            <div class="box-users">
+            <!-- users onlien -->
+               <?php include "users.php"?>
+            </div>
+            <div class="box-mes">
+          <!-- message -->
+             <?php include "mes.php"?>
+            </div>
+        </div>
     
         <!-- sweetalert cdnjs link -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
